@@ -42,7 +42,7 @@ namespace WavesCS
                 case StageNetChainId : return StageNetHost;
                 case TestNetChainId  : return TestNetHost;
                 case MainNetChainId  : return MainNetHost;
-                default: throw new ArgumentException("Unknown chainId: " + chainId);
+                default: return "";//throw new ArgumentException("Unknown chainId: " + chainId);
             }
         }
 
@@ -167,7 +167,7 @@ namespace WavesCS
         public Transaction[] GetTransactions(string address, int limit = 100)
         {
             return GetTransactionsByAddress(address, limit)
-                .Select(tx => Transaction.FromJson(ChainId, tx))
+                .Select(tx => Transaction.FromJson(ChainId, tx, this))
                 .ToArray();
         }
 
