@@ -6,6 +6,10 @@
     <VersionPrefix>1.0.0.0</VersionPrefix>
     <TargetFramework>net451</TargetFramework>
 	<Protobuf_NoWarnMissingExpected>true</Protobuf_NoWarnMissingExpected>
+	<Version>1.2.8</Version>
+	<PackageProjectUrl>https://github.com/xucito/WavesCS</PackageProjectUrl>
+	<Description>Fork of WavesCS (https://github.com/wavesplatform/WavesCS) with a number of fixes https://github.com/xucito/WavesCS</Description>
+	<PackageLicenseUrl>https://github.com/xucito/WavesCS/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="amount.proto" />
